@@ -1,0 +1,12 @@
+<suite name = " API Testing for Contact List Application ">
+<listeners>
+<listener class-name = "telecom_Listeners.Listeners">
+</listener>
+</listeners>
+<test name = "Contact List API">
+<classes>
+<class name = "telecom_domain_REST.Telecom_API">
+</class>
+</classes>
+</test>
+</suite>
