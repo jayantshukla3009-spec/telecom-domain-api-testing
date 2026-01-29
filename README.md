@@ -39,7 +39,9 @@ The project is implemented using **both Postman (manual API testing)** and **RES
 ---
 
 ## Project Structure
-Telecom_Domain_API/
+Project Structure
+
+telecom-domain-api-testing
 │
 ├── src/main/java
 │   ├── telecom_report
@@ -55,19 +57,19 @@ Telecom_Domain_API/
 │   ├── telecom_domain_REST
 │   │   └── Telecom_API.java
 │   │
-│   └── telecom_Listeners
+│   └── telecom_listeners
 │       └── Listeners.java
 │
 ├── src/main/resources
-│
 ├── src/test/resources
 │
 ├── Reports
-│   └── TelecomAPI_Report.html
+│   └── TelecomAPIReport.html
 │
 ├── pom.xml
 ├── testng.xml
 └── README.md
+
 
 
 
