@@ -39,10 +39,8 @@ The project is implemented using **both Postman (manual API testing)** and **RES
 ---
 
 ## Project Structure
-Project Structure
 
-telecom-domain-api-testing
-│
+
 ├── src/main/java
 │   ├── telecom_report
 │   │   └── ExtentManager.java
