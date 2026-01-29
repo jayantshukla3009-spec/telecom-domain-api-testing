@@ -39,13 +39,36 @@ The project is implemented using **both Postman (manual API testing)** and **RES
 ---
 
 ## Project Structure
-src/test/java
-├── test cases
-├── request classes
-├── response POJOs
-└── utility classes
-pom.xml → Maven dependencies
-testng.xml → Test suite configuration
+Telecom_Domain_API/
+│
+├── src/main/java
+│   ├── telecom_report
+│   │   └── ExtentManager.java
+│   │
+│   └── telecom_resource
+│       ├── addUser_POJO.java
+│       ├── Contact_POJO.java
+│       ├── User_POJO.java
+│       └── UserResponse_POJO.java
+│
+├── src/test/java
+│   ├── telecom_domain_REST
+│   │   └── Telecom_API.java
+│   │
+│   └── telecom_Listeners
+│       └── Listeners.java
+│
+├── src/main/resources
+│
+├── src/test/resources
+│
+├── Reports
+│   └── TelecomAPI_Report.html
+│
+├── pom.xml
+├── testng.xml
+└── README.md
+
 
 
 ---
