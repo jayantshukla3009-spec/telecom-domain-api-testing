@@ -1,98 +1,199 @@
-# Telecom Domain API Testing – Contact List Application
+📡 Telecom Domain API Automation Framework
+📌 Project Overview
 
-## Project Overview
-This project focuses on end-to-end API testing of a Telecom domain **Contact List Application**.  
-The application allows users to manage contacts by performing operations such as user registration, login, add contact, update contact, retrieve contact details, and delete contacts.
+This project focuses on automation testing of REST APIs for a Contact List Application in the Telecom domain. The framework validates end-to-end API workflows using Postman and REST Assured to ensure correctness, reliability, and security of API responses.
 
-The project is implemented using **both Postman (manual API testing)** and **REST Assured (automation)** to demonstrate strong understanding of API testing concepts, validation techniques, and automation practices.
+The automation suite validates authentication, CRUD operations, API chaining, response validations, and negative scenarios using a structured TestNG-based automation framework.
 
----
+🌐 Application Under Test
 
-## Application Features Tested
-- User Registration
-- User Login & Authentication
-- Add Contact
-- Get Contact Details
-- Update Contact (PUT / PATCH)
-- Delete Contact
-- Logout
+Contact List API
+https://thinking-tester-contact-list.herokuapp.com
 
----
+This application provides REST APIs to manage users and contact details including authentication, contact creation, update, retrieval, and deletion operations.
 
-## Tech Stack
+🎯 Automation Scope
+👤 User Management APIs
 
-### Manual API Testing
-- Tool: Postman
-- API Type: REST
-- Authentication: Token-based
-- Validations: Status codes, response body, headers
+Add new user
 
-### Automation API Testing
-- Language: Java
-- Automation Tool: REST Assured
-- Test Framework: TestNG
-- Build Tool: Maven
-- JSON Parsing: Jackson / JsonPath
-- Assertions: TestNG & Hamcrest
-- Reporting: Console & TestNG reports
+Get user profile
 
----
+Update user details
 
-## Project Structure
+Login user and generate authentication token
+
+Logout user
+
+📇 Contact Management APIs
+
+Add new contact
+
+Retrieve contact list
+
+Retrieve contact by ID
+
+Update full contact details (PUT)
+
+Update partial contact details (PATCH)
+
+❌ Negative Testing
+
+Validate login failure with invalid credentials
+
+Validate response status codes and error handling
+
+🛠 Tech Stack
+Category	Technology
+Programming Language	Java
+API Automation Tool	REST Assured
+Manual API Tool	Postman
+Test Framework	TestNG
+Build Tool	Maven
+Reporting	Extent Reports
+Serialization	POJO + Jackson Databind
+Version Control	Git & GitHub
+🏗 Framework Architecture Highlights
+✔ API Chaining Implementation
+
+Dynamic user token generation
+
+Token reuse across dependent API calls
+
+Contact ID extraction and reuse
+
+✔ POJO-Based Serialization
+
+Request payload mapping using Java POJO classes
+
+Response deserialization for structured validation
+
+✔ Test Execution Flow Automation
+Add User → Get Profile → Update User → Login → 
+Add Contact → Get Contact List → Get Contact → 
+Update Contact → Partial Update → Logout
 
 
-├── src/main/java
-│   ├── telecom_report
-│   │   └── ExtentManager.java
-│   │
-│   └── telecom_resource
-│       ├── addUser_POJO.java
-│       ├── Contact_POJO.java
-│       ├── User_POJO.java
-│       └── UserResponse_POJO.java
-│
-├── src/test/java
-│   ├── telecom_domain_REST
-│   │   └── Telecom_API.java
-│   │
-│   └── telecom_listeners
-│       └── Listeners.java
-│
-├── src/main/resources
-├── src/test/resources
-│
-├── Reports
-│   └── TelecomAPIReport.html
-│
-├── pom.xml
-├── testng.xml
-└── README.md
+(Aligned with project requirement flow)
 
+✔ Centralized Reporting Framework
 
+Extent Reports integration using TestNG Listener
 
+Execution logs and result tracking
 
----
+✔ Response Validation
 
-## Key Testing Activities
-- Validated HTTP status codes (200, 201, 400, 401, 404)
-- Verified response body fields and data integrity
-- Performed API chaining across multiple requests
-- Used POJO classes for request and response serialization
-- Automated CRUD operations using REST Assured
-- Logged request and response details for debugging
+Status code validation
 
----
+Status message validation
 
-## How to Run Automation Tests
-1. Clone the repository
-2. Import the project as a Maven project
-3. Update base URI if required
-4. Run tests using:
-   - `testng.xml`  
-   **or**
-   - `mvn test`
+JSON body validation using Hamcrest assertions
 
----
+src/main/java
+ ├── telecom_report
+ │    └── ExtentManager.java
+ │
+ └── telecom_resource
+      ├── addUser_POJO.java
+      ├── Contact_POJO.java
+      ├── User_POJO.java
+      └── UserResponse_POJO.java
 
-## Notes
-This project was created for learning and hands-on practice of **API testing in a real-time Telecom domain scenario**, covering both **manual and automation testing approaches**.
+src/test/java
+ ├── telecom_domain_REST
+ │    └── Telecom_API.java
+ │
+ └── telecom_Listeners
+      └── Listeners.java
+
+Reports/ – Extent HTML reports  
+Postman Collection – API manual testing scripts  
+
+testng.xml – Test suite configuration  
+pom.xml – Maven dependencies
+
+✅ Test Scenarios Covered
+User APIs
+
+Add user validation
+
+Authentication token validation
+
+User profile verification
+
+User update validation
+
+Logout validation
+
+Contact APIs
+
+Contact creation validation
+
+Contact retrieval validation
+
+Contact update validation
+
+Partial update validation
+
+Negative Scenarios
+
+Invalid login validation
+
+Error response validation
+
+📊 Reporting Features
+
+Extent HTML execution reports
+
+Step-level logging
+
+Test lifecycle tracking using TestNG Listener
+
+▶️ How To Execute The Project
+Prerequisites
+
+Java JDK 8+
+
+Maven Installed
+
+Postman (Optional for manual verification)
+
+Git
+
+Clone Repository
+git clone <repository-url>
+
+Run Using Maven
+mvn clean test
+
+Run Using TestNG
+
+Execute:
+
+testng.xml
+
+🚀 Key Learning Outcomes
+
+REST API automation framework design
+
+Token-based authentication testing
+
+API chaining implementation
+
+Serialization & Deserialization using POJO
+
+Response validation using REST Assured
+
+Hybrid manual + automation API testing approach
+
+👨‍💻 Author
+
+Jayant Kumar Shukla
+🔗 LinkedIn: https://www.linkedin.com/in/jayant-kumar-shukla
+
+🔗 GitHub: https://github.com/jayantshukla3009-spec
+
+📎 Notes
+
+This project was developed as part of Telecom domain API testing capstone assignment to demonstrate real-world REST API automation testing practices.
